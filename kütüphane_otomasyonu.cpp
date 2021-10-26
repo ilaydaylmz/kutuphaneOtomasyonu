@@ -1,15 +1,12 @@
 /************************************************************************************************************************************************************************************************
-**                                                                 SAKARYA ÜNÝVERSÝTESÝ 
-**                                                       BÝLGÝSAYAR VE BÝLÝÞÝM BÝLÝMLERÝ FAKÜLTESÝ
-**                                                              BÝLGÝSAYAR MÜHENDÝSLÝÐÝ BÖLÜMÜ
-**                                                               PROGRAMLAMAYA GÝRÝÞ DERSÝ
-**
-**                                                                  ÖDEV NUMARASI: PROJE1
-**                                                                  ÖÐRENCÝ ADI: ÝLAYDA YILMAZ 
-**                                                                  ÖÐRENCÝ NUMARASI:B201210057
-**                                                                  DERS GRUBU:1B GRUBU
+**                                                                 SAKARYA ÃœNÄ°VERSÄ°TESÄ° 
+**                                                       BÄ°LGÄ°SAYAR VE BÄ°LÄ°ÅžÄ°M BÄ°LÄ°MLERÄ° FAKÃœLTESÄ°
+**                                                              BÄ°LGÄ°SAYAR MÃœHENDÄ°SLÄ°ÄžÄ° BÃ–LÃœMÃœ
+**                                                               PROGRAMLAMAYA GÄ°RÄ°Åž DERSÄ°
+**                                                                       PROJE1
+**                                                                   Ä°LAYDA YILMAZ 
 **************************************************************************************************************************************************************************************************/
-#include<iostream>                //gerekli olan kütüphaneleri ekledim.
+#include<iostream>                //gerekli olan kÃ¼tÃ¼phaneleri ekledim.
 #include<windows.h>
 #include<fstream>
 #include<stdio.h>
@@ -20,7 +17,7 @@
 using namespace std;
 int main()
 {
-	auto start = chrono::system_clock::now();                             //kullanýcýnýn programa giris saatini yazdýrdým.
+	auto start = chrono::system_clock::now();                             //kullanÄ±cÄ±nÄ±n programa giris saatini yazdÄ±rdÄ±m.
 	auto simdi = chrono::system_clock::to_time_t(start);
 	char giris_saat[30];
 	ctime_s(giris_saat, sizeof(giris_saat),& simdi);
@@ -30,14 +27,14 @@ int main()
 	string Sifre;
 	string Tc_No;
 	string ad;
-	string soyadý;
+	string soyadÄ±;
 	string uye_no;
 	string telefon;
 	string dogum_tarihi;
 	string gorevi;
 	string alabilecegi_kitap_sayisi;
 	string Okuyucu_Tc_No;
-	string Kitap_Ýsbn;
+	string Kitap_Ä°sbn;
 	string Kitap_ismi;
 	string Yazar_adi;
 	string Yazar_soyadi;
@@ -48,14 +45,14 @@ int main()
 	string donus_tarihi;
 
 
-	ifstream Dosya1;    //okuyucu isimli dosya oluþturdum.
+	ifstream Dosya1;    //okuyucu isimli dosya oluÅŸturdum.
 	Dosya1.open("okuyucu.txt", ios::app);
 	if (Dosya1.is_open() == true)
 	{
-		string Okuyucu_Tc_No;                          //okuyucu dosyasýnda olmasý gereken bilgileri yazdým ve okuyucu dosyasýna tanýmladým.
+		string Okuyucu_Tc_No;                          //okuyucu dosyasÄ±nda olmasÄ± gereken bilgileri yazdÄ±m ve okuyucu dosyasÄ±na tanÄ±mladÄ±m.
 		string Ad;
 		string Soyadi;
-		string Üye_No;
+		string Ãœye_No;
 		string Telefon;
 		string Dogum_Tarihi;
 		string Gorevi;
@@ -63,7 +60,7 @@ int main()
 		Dosya1 >> Okuyucu_Tc_No;
 		Dosya1 >> Ad;
 		Dosya1 >> Soyadi;
-		Dosya1 >> Üye_No;
+		Dosya1 >> Ãœye_No;
 		Dosya1 >> Telefon;
 		Dosya1 >> Dogum_Tarihi;
 		Dosya1 >> Gorevi;
@@ -72,18 +69,18 @@ int main()
 	}
 	Dosya1.close();
 
-	ifstream Dosya2;    //kitaplar isimli bir dosya oluþturdum
+	ifstream Dosya2;    //kitaplar isimli bir dosya oluÅŸturdum
 	Dosya2.open("kitaplar.txt", ios::app);
 	if (Dosya2.is_open() == true)
 	{
-		string Kitap_Ýsbn;                           //kitaplar dosyasýnda olmasý gereken bilgileri yazdým ve kitaplar dosyasýna tanýmladým.
+		string Kitap_Ä°sbn;                           //kitaplar dosyasÄ±nda olmasÄ± gereken bilgileri yazdÄ±m ve kitaplar dosyasÄ±na tanÄ±mladÄ±m.
 		string Kitap_ismi;
 		string Yazar_adi;
 		string Yazar_soyadi;
 		string Konu;
 		string Tur;
 		string Sayfa_sayisi;
-		Dosya2 >> Kitap_Ýsbn;
+		Dosya2 >> Kitap_Ä°sbn;
 		Dosya2 >> Kitap_ismi;
 		Dosya2 >> Yazar_adi;
 		Dosya2 >> Yazar_soyadi;
@@ -97,34 +94,34 @@ int main()
 	Dosya3.open("odunc.txt", ios::app);
 	if (Dosya3.is_open() == true)
 	{
-		string ÝSBN;      //odunc dosyasýnda olmasý gereken bilgileri yazdým ve odunc dosyasýna tanýmladým.
+		string Ä°SBN;      //odunc dosyasÄ±nda olmasÄ± gereken bilgileri yazdÄ±m ve odunc dosyasÄ±na tanÄ±mladÄ±m.
 		string TC_NO;
 		string Odunc_tarihi;
 		string Donus_tarihi;
-		Dosya3 >> ÝSBN;
+		Dosya3 >> Ä°SBN;
 		Dosya3 >> TC_NO;
 		Dosya3 >> Odunc_tarihi;
 		Dosya3 >> Donus_tarihi;
 	}
 	Dosya3.close();
 
-	ifstream Dosya4;    //kullanicilar isimli bir dosya oluþturdum.
+	ifstream Dosya4;    //kullanicilar isimli bir dosya oluÅŸturdum.
 	Dosya4.open("kullanicilar.txt");
 	if (Dosya4.is_open() == true)
 	{
-		string Kullanici_adi;              //dosyada olmasý gereken bilgileri yazdýrdým.
+		string Kullanici_adi;              //dosyada olmasÄ± gereken bilgileri yazdÄ±rdÄ±m.
 		string Sifre;
 		Dosya4 >> Kullanici_adi >> Sifre;
 	}
 
-	ofstream Dosya4Yaz;    //kullanicilar dosyasýna kullanici kaydettim.
+	ofstream Dosya4Yaz;    //kullanicilar dosyasÄ±na kullanici kaydettim.
 	Dosya4Yaz.open("kullanicilar.txt");
 	Dosya4Yaz << Kullanici_adi << "1234" << endl << Sifre << "1234" << endl;
 	Dosya4Yaz << Kullanici_adi << "aaa" << endl << Sifre << "aaa" << endl;
-	Dosya4Yaz.close();        //kaydetme islemi bittiði için dosyayý kapattým.
+	Dosya4Yaz.close();        //kaydetme islemi bittiÄŸi iÃ§in dosyayÄ± kapattÄ±m.
 
 
-	ifstream Dosya4Oku("kullanici.txt");            //kullanicilar dosyasýný okuttum.
+	ifstream Dosya4Oku("kullanici.txt");            //kullanicilar dosyasÄ±nÄ± okuttum.
 	while (!Dosya4Oku.eof())
 	{
 		string kullanici_adi;
@@ -134,16 +131,16 @@ int main()
 		cout << "sifre giriniz:";
 		cin >> sifre;
 		Dosya4Oku >> Kullanici_adi >> Sifre;
-		if ((kullanici_adi=="1234"&&sifre=="1234") || (kullanici_adi=="aaa"&& sifre=="aaa") )      //þifre ya da kullanici adi hatali ise çalýþmaz.
+		if ((kullanici_adi=="1234"&&sifre=="1234") || (kullanici_adi=="aaa"&& sifre=="aaa") )      //ÅŸifre ya da kullanici adi hatali ise Ã§alÄ±ÅŸmaz.
 		{
 			Dosya4Oku.close();
 			do
 			{
-				cout << "YAPMAK ISTEDIGINIZ ISLEMI SECINIZ:" << endl;          //giris baþarýlý bir þekilde gercekleþtiyse seçenekler kullanýcýnýn karþýsýna çýkar.
+				cout << "YAPMAK ISTEDIGINIZ ISLEMI SECINIZ:" << endl;          //giris baÅŸarÄ±lÄ± bir ÅŸekilde gercekleÅŸtiyse seÃ§enekler kullanÄ±cÄ±nÄ±n karÅŸÄ±sÄ±na Ã§Ä±kar.
 				cout << "1-Okuyucu kaydi" << endl;
-				cout << "2-Okuyucu kaydi güncelleme" << endl;
+				cout << "2-Okuyucu kaydi gÃ¼ncelleme" << endl;
 				cout << "3-Okuyucu kaydi silme" << endl;
-				cout << "4-Okuyucu üzerindeki kitaplar listesi" << endl;
+				cout << "4-Okuyucu Ã¼zerindeki kitaplar listesi" << endl;
 				cout << "5-Okuyucu kitap odunc alma" << endl;
 				cout << "6-Okuyucu kitap geri dondurme" << endl;
 				cout << "7-Kitap ekleme" << endl;
@@ -153,11 +150,11 @@ int main()
 				cin >> secim;
 			} while (secim != 1 && secim != 2 && secim != 3 && secim != 4 && secim != 5 && secim != 6 && secim != 7 && secim != 8 && secim != 9);
 			char cevap;
-			if (secim == 1)       //1.secenek secildigi zaman calýsýr.
+			if (secim == 1)       //1.secenek secildigi zaman calÄ±sÄ±r.
 			{
 				cout << ".....Secilen islem 1-okuyucu kaydi.....";
 				ofstream Dosya1Yaz;
-				Dosya1Yaz.open("okuyucu.txt", ios::app);            //okuyucu dosyasýný ekleme modunda açtým.
+				Dosya1Yaz.open("okuyucu.txt", ios::app);            //okuyucu dosyasÄ±nÄ± ekleme modunda aÃ§tÄ±m.
 				do
 				{
 					cout << "\n TC NO:";
@@ -165,7 +162,7 @@ int main()
 					cout << "\n Ad:";
 					cin >> ad;
 					cout << "\n Soyadi:";
-					cin >> soyadý;
+					cin >> soyadÄ±;
 					cout << "\n Uye no:";
 					cin >> uye_no;
 					cout << "\n Telefon:";
@@ -176,16 +173,16 @@ int main()
 					cin >> gorevi;
 					cout << "\n Alabilecegi kitap sayisi:";
 					cin >> alabilecegi_kitap_sayisi;
-					//dýþarýdan girilen bilgileri okuyucu dosyasýna yazdýrdým.
-					Dosya1Yaz << Okuyucu_Tc_No << " " << endl << ad << " " << endl << soyadý << " " << endl << uye_no << " " << endl << dogum_tarihi << " " << endl << gorevi << " " << endl << alabilecegi_kitap_sayisi << endl;
+					//dÄ±ÅŸarÄ±dan girilen bilgileri okuyucu dosyasÄ±na yazdÄ±rdÄ±m.
+					Dosya1Yaz << Okuyucu_Tc_No << " " << endl << ad << " " << endl << soyadÄ± << " " << endl << uye_no << " " << endl << dogum_tarihi << " " << endl << gorevi << " " << endl << alabilecegi_kitap_sayisi << endl;
 					cout << "\n Baska kayit yapacak misin? (e/h)";
 					cin >> cevap;
 				} while (!(cevap == 'h'));
-				Dosya1Yaz.close();             //yazýlan bilgileri kaydedip dosyayý kapattým.
-				cout << "\n okuyucu kaydi tamamlandi." << endl;               //kayýtýn tamamlandýgýný belirtim bitirdim.
+				Dosya1Yaz.close();             //yazÄ±lan bilgileri kaydedip dosyayÄ± kapattÄ±m.
+				cout << "\n okuyucu kaydi tamamlandi." << endl;               //kayÄ±tÄ±n tamamlandÄ±gÄ±nÄ± belirtim bitirdim.
 			}
 
-			if (secim == 2)                //2 numaralý secenek seçildiði zaman calýþýr.
+			if (secim == 2)                //2 numaralÄ± secenek seÃ§ildiÄŸi zaman calÄ±ÅŸÄ±r.
 			{
 				cout << ".....Secilen islem 2-kayit guncelleme.....";
 				cout << "\n TC NO:";
@@ -194,8 +191,8 @@ int main()
 				ofstream Dosya_okuyucu("okuyucu.tmp");
 				while (!Dosya1Oku.eof())
 				{
-					Dosya1Oku >> Okuyucu_Tc_No >> ad >> soyadý >> uye_no >> telefon >> dogum_tarihi >> gorevi >> alabilecegi_kitap_sayisi;
-					if (Tc_No == Okuyucu_Tc_No)     //okuyucu tc no ile girilen tc no ayný ise çalýþýr.
+					Dosya1Oku >> Okuyucu_Tc_No >> ad >> soyadÄ± >> uye_no >> telefon >> dogum_tarihi >> gorevi >> alabilecegi_kitap_sayisi;
+					if (Tc_No == Okuyucu_Tc_No)     //okuyucu tc no ile girilen tc no aynÄ± ise Ã§alÄ±ÅŸÄ±r.
 					{
 						ofstream Dosya_okuyucuYaz;
 						Dosya_okuyucu.open("okuyucu.tmp", ios::out);      //gecici dosyaya duzeltilen bilgileri kaydettim.
@@ -204,7 +201,7 @@ int main()
 						cout << "\n Ad:";
 						cin >> ad;
 						cout << "\n Soyadi:";
-						cin >> soyadý;
+						cin >> soyadÄ±;
 						cout << "\n Uye no:";
 						cin >> uye_no;
 						cout << "\n Telefon:";
@@ -215,189 +212,189 @@ int main()
 						cin >> gorevi;
 						cout << "\n Alabilecegi kitap sayisi:";
 						cin >> alabilecegi_kitap_sayisi;
-						Dosya_okuyucuYaz.close();     //gecici dosyaya yazma islemini tamamladým.
-						cout << "\n Kitap duzeltme islemi tamamlanmýstýr.";
+						Dosya_okuyucuYaz.close();     //gecici dosyaya yazma islemini tamamladÄ±m.
+						cout << "\n Kitap duzeltme islemi tamamlanmÄ±stÄ±r.";
 					}
 					else
-						cout << "Yanlýs TC NO girdiniz.";    //yanlýþ tc no girildiði zaman çalýþýr.
+						cout << "YanlÄ±s TC NO girdiniz.";    //yanlÄ±ÅŸ tc no girildiÄŸi zaman Ã§alÄ±ÅŸÄ±r.
 				}
-				Dosya1Oku.close();     //okuyucu dosyasýný kapattým.
+				Dosya1Oku.close();     //okuyucu dosyasÄ±nÄ± kapattÄ±m.
 				Dosya_okuyucu.close();
-				remove("okuyucu.txt");       //okuyucu dosyasýný sildim
-				rename("okuyucu.tmp", "okuyucu.txt");     //dosyalarýn ismini deðiþtirdim.
+				remove("okuyucu.txt");       //okuyucu dosyasÄ±nÄ± sildim
+				rename("okuyucu.tmp", "okuyucu.txt");     //dosyalarÄ±n ismini deÄŸiÅŸtirdim.
 			}
 
-			if (secim == 3)                 //3.secenek seçildiði zaman calýþýr.
+			if (secim == 3)                 //3.secenek seÃ§ildiÄŸi zaman calÄ±ÅŸÄ±r.
 			{
 				cout << ".....Secilen islem 3- okuyucu silme....." << endl;
-				ifstream Dosya1Oku;                         //okuyucu dosyasýný açtým.
+				ifstream Dosya1Oku;                         //okuyucu dosyasÄ±nÄ± aÃ§tÄ±m.
 				Dosya1Oku.open("okuyucu.txt");
 				ofstream Dosya_okuyucu;
-				Dosya_okuyucu.open("okuyucu.tmp", ios::app);             //okuyucu isimli gecici bir dosya oluþturdum ve ekleme modunda açtýrdým.
+				Dosya_okuyucu.open("okuyucu.tmp", ios::app);             //okuyucu isimli gecici bir dosya oluÅŸturdum ve ekleme modunda aÃ§tÄ±rdÄ±m.
 				cout << "\n TC NO:";
 				cin >> Tc_No;
 				while (!Dosya1Oku.eof())
 				{
-					Dosya1Oku >> Okuyucu_Tc_No >> ad >> soyadý >> uye_no >> telefon >> dogum_tarihi >> gorevi >> alabilecegi_kitap_sayisi;
-					if (Tc_No == Okuyucu_Tc_No)     //dýþarýdan girilen tc no ile sistemdeki tc no ayný ise çalýþýr.
+					Dosya1Oku >> Okuyucu_Tc_No >> ad >> soyadÄ± >> uye_no >> telefon >> dogum_tarihi >> gorevi >> alabilecegi_kitap_sayisi;
+					if (Tc_No == Okuyucu_Tc_No)     //dÄ±ÅŸarÄ±dan girilen tc no ile sistemdeki tc no aynÄ± ise Ã§alÄ±ÅŸÄ±r.
 					{
 						ofstream Dosya1Yaz;
-						Dosya1Yaz.open("okuyucu.txt", ios::out);      //sistemde varolan bilgilerin yerine "" karakterini yazdýrdým.
+						Dosya1Yaz.open("okuyucu.txt", ios::out);      //sistemde varolan bilgilerin yerine "" karakterini yazdÄ±rdÄ±m.
 						Tc_No == "";
 						ad == "";
-						soyadý == "";
+						soyadÄ± == "";
 						uye_no == "";
 						telefon == "";
 						dogum_tarihi == "";
 						gorevi == "";
 						alabilecegi_kitap_sayisi == "";
-						Dosya1Yaz.close();                      //yazma islemini tamamladýgým icin dosyayý kapattým.
-						cout << "\n Kayit silme tamamlanmýstýr.";                 //silme isleminin bittigini belirttim ve sonlandýrdým.
+						Dosya1Yaz.close();                      //yazma islemini tamamladÄ±gÄ±m icin dosyayÄ± kapattÄ±m.
+						cout << "\n Kayit silme tamamlanmÄ±stÄ±r.";                 //silme isleminin bittigini belirttim ve sonlandÄ±rdÄ±m.
 					}
 				}
-				Dosya1Oku.close();           //okuyucu dosyaysýný kapattým.
-				Dosya_okuyucu.close();            //gecici olan okuyucu dosyasýný kapattým. 
-				remove("okuyucu.txt");            //okuyucu isimli dosyayý sildim.
-				rename("okuyucu.tmp", "okuyucu.txt");                 //gecici dosyanýn ismini deðiþtirdim.
+				Dosya1Oku.close();           //okuyucu dosyaysÄ±nÄ± kapattÄ±m.
+				Dosya_okuyucu.close();            //gecici olan okuyucu dosyasÄ±nÄ± kapattÄ±m. 
+				remove("okuyucu.txt");            //okuyucu isimli dosyayÄ± sildim.
+				rename("okuyucu.tmp", "okuyucu.txt");                 //gecici dosyanÄ±n ismini deÄŸiÅŸtirdim.
 			}
 
-			if (secim == 4)               //4numaralý secim yapýldýgý zaman çalýþýr.
+			if (secim == 4)               //4numaralÄ± secim yapÄ±ldÄ±gÄ± zaman Ã§alÄ±ÅŸÄ±r.
 			{
 				cout << ".....Secilen islem 4- okuyucu uzerindeki kitap listesi....." << endl;
 				cout << "\n TC NO:";
 				cin >> Tc_No;
 				ifstream Dosya1Oku;
 				Dosya1Oku.open("okuyucu.txt");
-				while (!Dosya1Oku.eof())           //baðlantý kurmak için okuyucu dosyasýný okuttum.
+				while (!Dosya1Oku.eof())           //baÄŸlantÄ± kurmak iÃ§in okuyucu dosyasÄ±nÄ± okuttum.
 				{
-					Dosya1Oku >> Okuyucu_Tc_No >> ad >> soyadý >> uye_no >> telefon >> dogum_tarihi >> gorevi >> alabilecegi_kitap_sayisi;
-					if (Tc_No == Okuyucu_Tc_No)            //dýþarýdan girilen tc no ile okuyucu tc no ayný ise çalýþýr.
+					Dosya1Oku >> Okuyucu_Tc_No >> ad >> soyadÄ± >> uye_no >> telefon >> dogum_tarihi >> gorevi >> alabilecegi_kitap_sayisi;
+					if (Tc_No == Okuyucu_Tc_No)            //dÄ±ÅŸarÄ±dan girilen tc no ile okuyucu tc no aynÄ± ise Ã§alÄ±ÅŸÄ±r.
 					{
 						Dosya1Oku.close();
 						ifstream Dosya3Oku;
-						Dosya3Oku.open("odunc.txt");          //odunc dosyasýný okuttum.
+						Dosya3Oku.open("odunc.txt");          //odunc dosyasÄ±nÄ± okuttum.
 						while (!Dosya3Oku.eof())
 						{
-							Dosya3Oku >> Kitap_Ýsbn >> Okuyucu_Tc_No >> odunc_tarihi >> donus_tarihi;
-							if (Dosya3Oku.eof())             //dosya3 okumasý tamamlandýgý zaman calýþýr.
+							Dosya3Oku >> Kitap_Ä°sbn >> Okuyucu_Tc_No >> odunc_tarihi >> donus_tarihi;
+							if (Dosya3Oku.eof())             //dosya3 okumasÄ± tamamlandÄ±gÄ± zaman calÄ±ÅŸÄ±r.
 							{
 								Dosya3Oku.close();
-								cout << "\n okuyucu uzerindeki kitaplar:" << endl;           //okuyucunun odunc aldýðý kitaplarý listeledim.
-								cout << Kitap_Ýsbn << "Isbn numarali kitap" << endl << Okuyucu_Tc_No << "Okuyucu tc no" << endl << odunc_tarihi << "Odunc tarihi" << endl << donus_tarihi << "Donus tarihi" << endl;
+								cout << "\n okuyucu uzerindeki kitaplar:" << endl;           //okuyucunun odunc aldÄ±ÄŸÄ± kitaplarÄ± listeledim.
+								cout << Kitap_Ä°sbn << "Isbn numarali kitap" << endl << Okuyucu_Tc_No << "Okuyucu tc no" << endl << odunc_tarihi << "Odunc tarihi" << endl << donus_tarihi << "Donus tarihi" << endl;
 							}
 						}
 					}
 					else
-						cout << "\n Hatali TC NO girilmistir.";       //okuyucu tc no ile dýþarýdan girilen tc no ayný deðil ise çalýþýr.
+						cout << "\n Hatali TC NO girilmistir.";       //okuyucu tc no ile dÄ±ÅŸarÄ±dan girilen tc no aynÄ± deÄŸil ise Ã§alÄ±ÅŸÄ±r.
 				}
 			}
 
-			if (secim == 5)          //5 numaralý secim yapýldýgý zaman çalýþýr.
+			if (secim == 5)          //5 numaralÄ± secim yapÄ±ldÄ±gÄ± zaman Ã§alÄ±ÅŸÄ±r.
 			{
-				string Ýsbn;
+				string Ä°sbn;
 				cout << ".....Secilen islem 5-okuyucu kitap odunc alma....." << endl;
 				cout << "tc no:";
 				cin >> Tc_No;
-				ifstream Dosya1Oku;           //okuyucu isimli dosyayý açtým.
+				ifstream Dosya1Oku;           //okuyucu isimli dosyayÄ± aÃ§tÄ±m.
 				Dosya1Oku.open("okuyucu.txt", ios::in);
 				while (!Dosya1Oku.eof())
 				{
-					Dosya1Oku >> Okuyucu_Tc_No >> ad >> soyadý >> uye_no >> telefon >> dogum_tarihi >> gorevi >> alabilecegi_kitap_sayisi;
-					Dosya1Oku.close();                            //okuyucu dosyasýndaki verileri okuttum.
+					Dosya1Oku >> Okuyucu_Tc_No >> ad >> soyadÄ± >> uye_no >> telefon >> dogum_tarihi >> gorevi >> alabilecegi_kitap_sayisi;
+					Dosya1Oku.close();                            //okuyucu dosyasÄ±ndaki verileri okuttum.
 					ofstream Dosya3;
 					Dosya3.open("odunc.txt", ios::app);
-					if (Tc_No == Okuyucu_Tc_No)               //okuycu tc'si ile dýþarýdan girilen tc'nin ayný olduðu zaman çalýþýr.
+					if (Tc_No == Okuyucu_Tc_No)               //okuycu tc'si ile dÄ±ÅŸarÄ±dan girilen tc'nin aynÄ± olduÄŸu zaman Ã§alÄ±ÅŸÄ±r.
 					{
-						cout << "\n Odunc almak istediginiz kitabýn ÝSBN numarasýný  giriniz:";
-						cin >> Ýsbn;
+						cout << "\n Odunc almak istediginiz kitabÄ±n Ä°SBN numarasÄ±nÄ±  giriniz:";
+						cin >> Ä°sbn;
 						ifstream Dosya2Oku;
-						Dosya2Oku.open("kitaplar.txt", ios::in);                //dýþarýdan girilen isbn numarasýna sahip kitap olup olmadýðýný kontrol etmek için kitaplar dosyasýný okumaya açtým.
+						Dosya2Oku.open("kitaplar.txt", ios::in);                //dÄ±ÅŸarÄ±dan girilen isbn numarasÄ±na sahip kitap olup olmadÄ±ÄŸÄ±nÄ± kontrol etmek iÃ§in kitaplar dosyasÄ±nÄ± okumaya aÃ§tÄ±m.
 						while (!Dosya2Oku.eof())
 						{
-							Dosya2Oku >> Kitap_Ýsbn >> ad >> soyadý >> uye_no >> telefon >> dogum_tarihi >> gorevi >> alabilecegi_kitap_sayisi;
-							if (Ýsbn == Kitap_Ýsbn)                    //dýþarýdan girilen isbn ile kitap isbn uyumlu ise çalýþýr.
+							Dosya2Oku >> Kitap_Ä°sbn >> ad >> soyadÄ± >> uye_no >> telefon >> dogum_tarihi >> gorevi >> alabilecegi_kitap_sayisi;
+							if (Ä°sbn == Kitap_Ä°sbn)                    //dÄ±ÅŸarÄ±dan girilen isbn ile kitap isbn uyumlu ise Ã§alÄ±ÅŸÄ±r.
 							{
 								Dosya2Oku.close();
 								ofstream Dosya3Yaz;
-								Dosya3Yaz.open("odunc.txt", ios::app);               //odunc dosyasýný yazmak için açtým.
-								cout << "Ýsbn:";
-								cin >> Kitap_Ýsbn;
+								Dosya3Yaz.open("odunc.txt", ios::app);               //odunc dosyasÄ±nÄ± yazmak iÃ§in aÃ§tÄ±m.
+								cout << "Ä°sbn:";
+								cin >> Kitap_Ä°sbn;
 								cout << "Tc No:";
 								cin >> Okuyucu_Tc_No;
 								cout << "odunc tarihi:";
 								cin >> odunc_tarihi;
 								cout << "donus tarihi:";
 								cin >> donus_tarihi;
-								Dosya3Yaz << Kitap_Ýsbn << "" << endl << Okuyucu_Tc_No << "" << endl << odunc_tarihi << "" << endl << donus_tarihi << endl;   //odunc bilgilerini odunc isimli dosyaya yazdýrdým.
+								Dosya3Yaz << Kitap_Ä°sbn << "" << endl << Okuyucu_Tc_No << "" << endl << odunc_tarihi << "" << endl << donus_tarihi << endl;   //odunc bilgilerini odunc isimli dosyaya yazdÄ±rdÄ±m.
 								Dosya3Yaz.close();
-								cout << Kitap_Ýsbn << "ÝSBN numarali kitabi odunc aldiniz.";
+								cout << Kitap_Ä°sbn << "Ä°SBN numarali kitabi odunc aldiniz.";
 							}
 							else
-								cout << "hatali ÝSBN girilmistir.";            //dýþarýdan girilen isbn ile kitap isbn uyumlu deðil ise çalýþýr.
+								cout << "hatali Ä°SBN girilmistir.";            //dÄ±ÅŸarÄ±dan girilen isbn ile kitap isbn uyumlu deÄŸil ise Ã§alÄ±ÅŸÄ±r.
 						}
 					}
 					else
-						cout << "hatalý TC NO girilmistir.";              //dýþarýdan girilen tc ile okuyucu tc uyuþmuyorsa çalýþýr.
+						cout << "hatalÄ± TC NO girilmistir.";              //dÄ±ÅŸarÄ±dan girilen tc ile okuyucu tc uyuÅŸmuyorsa Ã§alÄ±ÅŸÄ±r.
 				}
 
 			}
 
-			if (secim == 6)       //6 numaralý secenek secildiði zaman çalýþýr.
+			if (secim == 6)       //6 numaralÄ± secenek secildiÄŸi zaman Ã§alÄ±ÅŸÄ±r.
 			{
-				string Ýsbn;
+				string Ä°sbn;
 				string Tc_No;
 				cout << ".....Secim 6-okuyucu kitap geri dondurme....." << endl;
-				cout << "TC NO:";       //baðlantý kurmak için kullanicidan tc no girmesini istedim.
+				cout << "TC NO:";       //baÄŸlantÄ± kurmak iÃ§in kullanicidan tc no girmesini istedim.
 				cin >> Tc_No;
 				ifstream Dosya1Oku;
-				Dosya1Oku.open("okuyucu.txt", ios::in);     //okuyucu dosyasýný açtýrdým.
+				Dosya1Oku.open("okuyucu.txt", ios::in);     //okuyucu dosyasÄ±nÄ± aÃ§tÄ±rdÄ±m.
 				while (!Dosya1Oku.eof())
 				{
-					Dosya1Oku >> Okuyucu_Tc_No >> ad >> soyadý >> uye_no >> telefon >> dogum_tarihi >> gorevi >> alabilecegi_kitap_sayisi;  //okuyucu dosyasýndaki verileri dosyadan okudum.
-					if (Tc_No == Okuyucu_Tc_No)          //dýþarýdan girilen tc no ile okuyucu tc no ayný ise çalýþýr.
+					Dosya1Oku >> Okuyucu_Tc_No >> ad >> soyadÄ± >> uye_no >> telefon >> dogum_tarihi >> gorevi >> alabilecegi_kitap_sayisi;  //okuyucu dosyasÄ±ndaki verileri dosyadan okudum.
+					if (Tc_No == Okuyucu_Tc_No)          //dÄ±ÅŸarÄ±dan girilen tc no ile okuyucu tc no aynÄ± ise Ã§alÄ±ÅŸÄ±r.
 					{
 						Dosya1Oku.close();
 						ifstream Dosya3Oku;
 						ofstream Dosya_odunc;
 						Dosya3Oku.open("odunc.txt", ios::in);
-						while (!Dosya3Oku.eof())       //odunc dosyasýný okuttum.
+						while (!Dosya3Oku.eof())       //odunc dosyasÄ±nÄ± okuttum.
 						{
-							Dosya3Oku >> Kitap_Ýsbn >> Okuyucu_Tc_No >> odunc_tarihi >> donus_tarihi;
-							if (Dosya3Oku.eof())        //odunc dosyasýnýn okumasý tamamlandýysa çalýþýr.
+							Dosya3Oku >> Kitap_Ä°sbn >> Okuyucu_Tc_No >> odunc_tarihi >> donus_tarihi;
+							if (Dosya3Oku.eof())        //odunc dosyasÄ±nÄ±n okumasÄ± tamamlandÄ±ysa Ã§alÄ±ÅŸÄ±r.
 							{
 								Dosya3Oku.close();
-								cout << "geri verilecek olan kitap isbn:";  //kullanýcýdan okuyucunun iade edeceði kitabýn isbn numarasýný girmesini istedim.
-								cin >> Ýsbn;
-								if (Ýsbn == Kitap_Ýsbn)           //okuyucunun odunc aldýðý kitap isbn numarasý ile dýþarýdan girilen isbn numarasý ayný ise çalýþýr.
+								cout << "geri verilecek olan kitap isbn:";  //kullanÄ±cÄ±dan okuyucunun iade edeceÄŸi kitabÄ±n isbn numarasÄ±nÄ± girmesini istedim.
+								cin >> Ä°sbn;
+								if (Ä°sbn == Kitap_Ä°sbn)           //okuyucunun odunc aldÄ±ÄŸÄ± kitap isbn numarasÄ± ile dÄ±ÅŸarÄ±dan girilen isbn numarasÄ± aynÄ± ise Ã§alÄ±ÅŸÄ±r.
 								{
 									ofstream Dosya3Yaz;
-									Dosya3Yaz.open("odunc.txt", ios::out);      //odunc dosyasýndaki bilgileri ""karakteri ile deðiþtirdim ve kitabýn odunc dosyasýndan silinmesini saðladým.
-									Kitap_Ýsbn == "";
+									Dosya3Yaz.open("odunc.txt", ios::out);      //odunc dosyasÄ±ndaki bilgileri ""karakteri ile deÄŸiÅŸtirdim ve kitabÄ±n odunc dosyasÄ±ndan silinmesini saÄŸladÄ±m.
+									Kitap_Ä°sbn == "";
 									Okuyucu_Tc_No == "";
 									odunc_tarihi == "";
 									donus_tarihi == "";
-									Dosya3Yaz.close();      //odunc dosyasýna yazma islemini tamamladým.
-									cout << "kitap iade islemi tamamlanmýstýr.";       //kullaniciya iade iþleminin baþarýyla gercekleþtiðini belirttim.
+									Dosya3Yaz.close();      //odunc dosyasÄ±na yazma islemini tamamladÄ±m.
+									cout << "kitap iade islemi tamamlanmÄ±stÄ±r.";       //kullaniciya iade iÅŸleminin baÅŸarÄ±yla gercekleÅŸtiÄŸini belirttim.
 								}
 							}
 						}
-						Dosya3Oku.close();      //dosya3'ün okuma modunu kapattým.
-						Dosya_odunc.close();      //gecici dosyayý kapattým.
-						remove("odunc.txt");     //odunc dosyasýný sildim.
-						rename("odunc.tmp", "odunc.txt");      //dosyalarýn ismini deðiþtirdim.
+						Dosya3Oku.close();      //dosya3'Ã¼n okuma modunu kapattÄ±m.
+						Dosya_odunc.close();      //gecici dosyayÄ± kapattÄ±m.
+						remove("odunc.txt");     //odunc dosyasÄ±nÄ± sildim.
+						rename("odunc.tmp", "odunc.txt");      //dosyalarÄ±n ismini deÄŸiÅŸtirdim.
 					}
 				}
 			}
 
-			if (secim == 7)           //7numaralý secenek seçildiði zaman çalýþýr.
+			if (secim == 7)           //7numaralÄ± secenek seÃ§ildiÄŸi zaman Ã§alÄ±ÅŸÄ±r.
 			{
 				cout << ".....Secilen islem 7-kitap ekleme....." << endl;
-				ofstream Dosya2Yaz;            //kitaplar dosyasýný yazma modunda açtým.
-				Dosya2Yaz.open("kitaplar.txt", ios::app);        // app modunda açtým.
+				ofstream Dosya2Yaz;            //kitaplar dosyasÄ±nÄ± yazma modunda aÃ§tÄ±m.
+				Dosya2Yaz.open("kitaplar.txt", ios::app);        // app modunda aÃ§tÄ±m.
 				do
 				{
-					cout << "ÝSBN:";             //kitaplar dosyasýnda istenen bilgileri kullancýdan kaydedeceði kitaba uygun bir þekilde girmesini istedim.
-					cin >> Kitap_Ýsbn;
+					cout << "Ä°SBN:";             //kitaplar dosyasÄ±nda istenen bilgileri kullancÄ±dan kaydedeceÄŸi kitaba uygun bir ÅŸekilde girmesini istedim.
+					cin >> Kitap_Ä°sbn;
 					cout << "kitap ismi:";
 					cin >> Kitap_ismi;
 					cout << "yazar adi:";
@@ -410,31 +407,31 @@ int main()
 					cin >> Tur;
 					cout << "sayfa sayisi:";
 					cin >> Sayfa_sayisi;
-					Dosya2Yaz << Kitap_Ýsbn << " " << Kitap_ismi << " " << Yazar_adi << " " << Yazar_soyadi << " " << Konu << " " << Tur << " " << Sayfa_sayisi; //girilen bilgileri dosyaya yazdýrdým.
-					cout << "baska kitap ekleyecek misiniz(e/h):";    //kitap eklemeye devam edip edilmeyeceðini sordum.
+					Dosya2Yaz << Kitap_Ä°sbn << " " << Kitap_ismi << " " << Yazar_adi << " " << Yazar_soyadi << " " << Konu << " " << Tur << " " << Sayfa_sayisi; //girilen bilgileri dosyaya yazdÄ±rdÄ±m.
+					cout << "baska kitap ekleyecek misiniz(e/h):";    //kitap eklemeye devam edip edilmeyeceÄŸini sordum.
 					cin >> cevap;
 				} while (!(cevap == 'h'));
-				Dosya2Yaz.close();       //dosyayý kapattým.
-				cout << "kitap ekleme islemi tamamlanmýstýr.";         //kitap ekleme isleminin bittiðini kullaniciya bildirdim.
+				Dosya2Yaz.close();       //dosyayÄ± kapattÄ±m.
+				cout << "kitap ekleme islemi tamamlanmÄ±stÄ±r.";         //kitap ekleme isleminin bittiÄŸini kullaniciya bildirdim.
 			}
 
-			if (secim == 8)                    //8.secenek secildiði zaman calýþýr.
+			if (secim == 8)                    //8.secenek secildiÄŸi zaman calÄ±ÅŸÄ±r.
 			{
-				string Ýsbn;
+				string Ä°sbn;
 				cout << ".....Secilen islem 8-kitap silme.....";
-				ifstream Dosya2Oku;                              //kitaplar dosyasýnýn verilerinin okuma modunu açtým.
+				ifstream Dosya2Oku;                              //kitaplar dosyasÄ±nÄ±n verilerinin okuma modunu aÃ§tÄ±m.
 				Dosya2Oku.open("kitaplar.txt");
 				ofstream Dosya_kitap;
-				cout << "ÝSBN:";               //silinmek istenen kitabýn isbn numarasýný istedim.
-				cin >> Ýsbn;
+				cout << "Ä°SBN:";               //silinmek istenen kitabÄ±n isbn numarasÄ±nÄ± istedim.
+				cin >> Ä°sbn;
 				while (!Dosya2Oku.eof())
 				{
-					Dosya2Oku >> Kitap_Ýsbn >> Kitap_ismi >> Yazar_adi >> Yazar_soyadi >> Konu >> Tur >> Sayfa_sayisi;   //kitaplar dosyasýndaki verileri okuttum.
-					if (Ýsbn == Kitap_Ýsbn)        //dýþarýdan girilen isbn ile sistemde kayýtlý olan isbn aynýysa çalýþýr.
+					Dosya2Oku >> Kitap_Ä°sbn >> Kitap_ismi >> Yazar_adi >> Yazar_soyadi >> Konu >> Tur >> Sayfa_sayisi;   //kitaplar dosyasÄ±ndaki verileri okuttum.
+					if (Ä°sbn == Kitap_Ä°sbn)        //dÄ±ÅŸarÄ±dan girilen isbn ile sistemde kayÄ±tlÄ± olan isbn aynÄ±ysa Ã§alÄ±ÅŸÄ±r.
 					{
 						ofstream Dosya2Yaz;
 						Dosya2Yaz.open("kitaplar.txt", ios::out);
-						Kitap_Ýsbn == "";                    //kayýtlý olan verilerin yerine "" karakterini yazdýrdým.
+						Kitap_Ä°sbn == "";                    //kayÄ±tlÄ± olan verilerin yerine "" karakterini yazdÄ±rdÄ±m.
 						Kitap_ismi == "";
 						Yazar_adi == "";
 						Yazar_soyadi == "";
@@ -442,33 +439,33 @@ int main()
 						Tur == "";
 						Sayfa_sayisi == "";
 						Dosya2Yaz.close();
-						cout << "\n Kitap silme islemi tamamlanmýstýr.";        // silme isleminin bittiðini kullanýcýya belirttim.
+						cout << "\n Kitap silme islemi tamamlanmÄ±stÄ±r.";        // silme isleminin bittiÄŸini kullanÄ±cÄ±ya belirttim.
 					}
 				}
 				Dosya2Oku.close();
 				Dosya_kitap.close();
-				remove("kitaplar.txt");               //kitaplar dosyasýný sildim.
-				rename("kitaplar.tmp", "kitaplar.txt");               //dosyanýn adýný deðiþtirdim.
+				remove("kitaplar.txt");               //kitaplar dosyasÄ±nÄ± sildim.
+				rename("kitaplar.tmp", "kitaplar.txt");               //dosyanÄ±n adÄ±nÄ± deÄŸiÅŸtirdim.
 			}
 
-			if (secim == 9)           //9 numaralý secenek seçildiði zaman çalýþýr.
+			if (secim == 9)           //9 numaralÄ± secenek seÃ§ildiÄŸi zaman Ã§alÄ±ÅŸÄ±r.
 			{
-				string Ýsbn;
+				string Ä°sbn;
 				cout << ".....secilen islem 9-kitap duzeltme....." << endl;
-				ifstream Dosya2Oku;              //kitaplar dosyasýný okudum.
+				ifstream Dosya2Oku;              //kitaplar dosyasÄ±nÄ± okudum.
 				Dosya2Oku.open("kitaplar.txt");
 				ofstream Dosya_kitap;
-				cout << "kitap isbn:";         //kullanicidan duzeltilecek kitap isbn numarasýný girmesini istedim.
-				cin >> Ýsbn;
+				cout << "kitap isbn:";         //kullanicidan duzeltilecek kitap isbn numarasÄ±nÄ± girmesini istedim.
+				cin >> Ä°sbn;
 				while (!Dosya2Oku.eof())
 				{
-					Dosya2Oku >> Kitap_Ýsbn >> Kitap_ismi >> Yazar_adi >> Yazar_soyadi >> Konu >> Tur >> Sayfa_sayisi;  //kitaplardosyasýndaki verileri okudum.
-					if (Ýsbn == Kitap_Ýsbn)     //girilen isbn ile uyumlu kitap varsa çalýþýr.
+					Dosya2Oku >> Kitap_Ä°sbn >> Kitap_ismi >> Yazar_adi >> Yazar_soyadi >> Konu >> Tur >> Sayfa_sayisi;  //kitaplardosyasÄ±ndaki verileri okudum.
+					if (Ä°sbn == Kitap_Ä°sbn)     //girilen isbn ile uyumlu kitap varsa Ã§alÄ±ÅŸÄ±r.
 					{
-						ofstream Dosya_kitap;         //gecici dosyaya veri yazdýrdým.
+						ofstream Dosya_kitap;         //gecici dosyaya veri yazdÄ±rdÄ±m.
 						Dosya_kitap.open("kitaplar.tmp", ios::out);
 						cout << "kitap isbn:";
-						cin >> Kitap_Ýsbn;
+						cin >> Kitap_Ä°sbn;
 						cout << "kitap ismi:";
 						cin >> Kitap_ismi;
 						cout << "yazar adi:";
@@ -480,15 +477,15 @@ int main()
 						cout << "sayfa_sayisi:";
 						cin >> Sayfa_sayisi;
 						Dosya_kitap.close();
-						cout << "\n Kitap duzeltme islemi tamamlanmýstýr.";    //duzeltme isleminin bittiðini kullanýcýya belirttim.
+						cout << "\n Kitap duzeltme islemi tamamlanmÄ±stÄ±r.";    //duzeltme isleminin bittiÄŸini kullanÄ±cÄ±ya belirttim.
 					}
 					else
-						cout << "\n Hatali ÝSBN girildi.";   //girilen isbn ile uyumlu kitap olmadýgý zaman çalýþýr.
+						cout << "\n Hatali Ä°SBN girildi.";   //girilen isbn ile uyumlu kitap olmadÄ±gÄ± zaman Ã§alÄ±ÅŸÄ±r.
 				}
-				Dosya2Oku.close();      //dosyalarý kapattým.
+				Dosya2Oku.close();      //dosyalarÄ± kapattÄ±m.
 				Dosya_kitap.close();
-				remove("kitaplar.txt"); //kitaplar dosyasýný sildim.
-				rename("kitaplar.tmp", "kitaplar.txt");     //dosyanýn adýný deðiþtirdim.
+				remove("kitaplar.txt"); //kitaplar dosyasÄ±nÄ± sildim.
+				rename("kitaplar.tmp", "kitaplar.txt");     //dosyanÄ±n adÄ±nÄ± deÄŸiÅŸtirdim.
 			}
 		}
 		else
